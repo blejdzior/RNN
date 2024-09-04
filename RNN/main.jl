@@ -5,8 +5,6 @@ import Base.show
 import Flux.onecold
 show(x::AbstractVecOrMat{T}) where {T} = show(IOContext(stdout, :limit => true), "text/plain", x), println(stdout)
 
-# look at this: https://arstechnica.com/information-technology/2024/06/researchers-upend-ai-status-quo-by-eliminating-matrix-multiplication-in-llms/
-
 # Data
 train_data = MLDatasets.MNIST(split=:train)
 test_data  = MLDatasets.MNIST(split=:test)
